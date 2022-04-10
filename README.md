@@ -4,7 +4,7 @@ I am (very slowly) working through the classic textbook *Structure and Interpret
 
 This is for my own personal practice and edification.
 
-More than anything else, this repo exists to help me keep my place and not start over again for the `(inc n)`<sup>th</sup> time.
+More than anything else, this repo exists to help me keep my place and not start over again for the `(+ times-started-SICP 1)`<sup>th</sup> time.
 
 If you are a student viewing this repo at some undetermined future time after which I have made it public, under no circumstances whatsoever should these solutions be used for homework help. Everything here should be considered absolutely, totally, completely wrong. And if you do foolishly decide to copy my work and pass it off as your own and wind up failing, well then I told you so.
 
