@@ -17,7 +17,7 @@ If you are a researcher or manager viewing this repo at some undertermined futur
 
 <dt>4/12/22</dt>
 <dd>Used data science instead of computer science to answer 1.15, which is almost certainly not the right way to do it. The data in <code>section-1.2-exercise-1.15-data.txt</code> is produced with 
-<code>
+<code><pre>
     (for-each
       (lambda (d)
         (print
@@ -27,6 +27,6 @@ If you are a researcher or manager viewing this repo at some undertermined futur
             (list d r (sine r) (sin r) count-ps)))
         (newline))
       (range 0 1800))
-    </code>
+    </pre></code>
 </dd>
 </dl>
