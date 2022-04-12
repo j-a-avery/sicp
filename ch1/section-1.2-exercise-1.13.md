@@ -4,9 +4,9 @@ Prove that $Fib(n)$ is the closest integer to $\phi^n / \sqrt{5}$, where $\phi =
 
 **Hint:** Let $\psi = \left( 1 - \sqrt 5\right) / 2$. Use induction and the definition of the Fibonacci numbers $$\mathrm{Fib}(n) = \left\{ \begin{array}{ll} 0 & n = 0 \\ 1 & n = 1 \\ Fib(n-1) + Fib(n-1) & otherwise \\ \end{array} \right.$$ to prove that $\mathrm{Fib}(n) = (\phi^n - \psi^n) / \sqrt{5}$.
 
-Proof:
+**Proof:**
 
-When $n = 0$, we can use arithmetic to verify the first base case that $\mathrm{Fib}(0) = \mathrm{round}(\phi^n / \sqrt{5}) = \left(\phi^0 - \psi^0\right) / \sqrt{5} = 0$.
+When $n = 0$, we can use arithmetic to verify the first base case that $\mathrm{Fib}(0) = \mathrm{round}(\phi^n / \sqrt{5}) = \left(\phi^0 - \psi^0\right) / \sqrt{5} = 0$:
     $$\begin{aligned}
         \mathrm{Fib}(0) &= \mathrm{round}(\phi^0 / \sqrt{5}) = \mathrm{round}(1 / \sqrt{5}) = \mathrm{round}(0.4472\dots) = 0 \\
         \mathrm{Fib}(0) &= \left(\phi^0 - \psi^0\right) / \sqrt{5} = \left(1 - 1\right) / \sqrt{5} = 0
