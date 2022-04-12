@@ -16,16 +16,17 @@ If you are a researcher or manager viewing this repo at some undertermined futur
 <dd>Can't find my previous solutions to &sect; 1.2, so working through it again for the <code>(inc times-read-&sect;1.2)</code><sup>th</sup> time, and... I forgot how brutal chapter 1 is, teaching freshman computer science using functional programming with junior/senior-level numerical analysis as the motivating examples.</dd>
 
 <dt>4/12/22</dt>
-<dd>Used data science instead of computer science to answer 1.15, which is almost certainly not the right way to do it. The data in `section-1.2-exercise-1.15-data.txt` is produced with ```{racket}
-(for-each
- (lambda (d)
-   (print
-    (let ((r (degrees->radians d))
-          (degrees->radians (lambda (d)
-                              (* d (/ pi 180)))))
-      (list d r (sine r) (sin r) count-ps)))
-   (newline))
- (range 0 1800))
-```
+<dd>Used data science instead of computer science to answer 1.15, which is almost certainly not the right way to do it. The data in <code>section-1.2-exercise-1.15-data.txt</code> is produced with 
+<code>
+    (for-each
+      (lambda (d)
+        (print
+          (let ((r (degrees->radians d))
+                (degrees->radians 
+                  (lambda (d) (* d (/ pi 180)))))
+            (list d r (sine r) (sin r) count-ps)))
+        (newline))
+      (range 0 1800))
+    </code>
 </dd>
 </dl>
