@@ -58,7 +58,7 @@
     (cont-frac n d k)))
 
 
-;;;; Section 1.3.4
+;;;; Section 1.34
 ;; functions included in the text
 
 (define (average-damp f)
