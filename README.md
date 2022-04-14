@@ -6,7 +6,7 @@ This is for my own personal practice and edification.
 
 More than anything else, this repo exists to help me keep my place and not start over again for the `(inc times-started-SICP)`<sup>th</sup> time.
 
-Answers in Racket (which *should* be pretty much everything, but no) are written in DrRacket and exported to plain text using `File` $\rightarrow$`Save Other` $\rightarrow$ `Save Definitions as Text…` and overwriting the file every. single. time. Everything else that isn't created using some obvious other tool (Jupyter Notebook, Draw.IO) is created in VS Code.
+Answers in Racket (which *should* be pretty much everything, but no) are written in DrRacket and exported to plain text using `File` -> `Save Other` -> `Save Definitions as Text…` and overwriting the file every. single. time. Everything else that isn't created using some obvious other tool (Jupyter Notebook, Draw.IO) is created in VS Code.
 
 If you are a student viewing this repo at some undetermined future time after which I have made it public, under no circumstances whatsoever should these solutions be used for homework help. Everything here should be considered absolutely, totally, completely wrong. And if you do foolishly decide to copy my work and pass it off as your own and wind up failing, well then I told you so.
 
@@ -26,3 +26,14 @@ If you are a researcher or manager viewing this repo at some undertermined futur
           (newline))
         (range 0 1800))
   ```
+
+* **4/13/22** Oh, so now we're teaching loop invariants to freshmen as an offhand remark during an exercise? They say COVID is a vascular disease that affects everything, including the brain. I had COVID three months ago tomorrow. I remember 1.16-1.18 being easy. I've spent two hours on 1.16 and I can't. fucking. get. it.
+
+* **4/14/22** 4-6 hours totdal. Duh. *a* and *b* can *both* change between calls of `fast-expt-iter`. [facepalm]
+
+<script>
+  console.log("Can I run JavaScript in Markdown?");
+  const p = document.createElement('p');
+  p.text = "farts";
+  document.querySelectors('body')[0].appendChild(p);
+</script>
