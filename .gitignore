@@ -1,0 +1,8 @@
+*.old.*
+*.old
+*.bak
+*.bak.*
+*.rkt~
+*-checkpoint.ipynb
+.ipynb_checkpoints/*
+progress_tracker/*
