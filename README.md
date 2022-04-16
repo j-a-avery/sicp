@@ -27,6 +27,7 @@ If you are a researcher or manager viewing this repo at some undertermined futur
         (range 0 1800))
   ```
 
-* **4/13/22** Oh, so now we're teaching loop invariants to freshmen as an offhand remark during an exercise? They say COVID is a vascular disease that affects everything, including the brain. I had COVID three months ago tomorrow. I remember 1.16-1.18 being easy. I've spent two hours on 1.16 and I can't. fucking. get. it.
+* **4/13/22** Oh, so now we're teaching loop invariants to freshmen as an offhand remark during an exercise? They say COVID is a vascular disease that affects everything, including the brain. I had COVID three months ago tomorrow. I remember 1.16-1.18 being easy. I've spent two hours on 1.16 and I can't %$@#ing get it.
 
-* **4/14/22** 4-6 hours totdal. Duh. *a* and *b* can *both* change between calls of `fast-expt-iter`. [facepalm]
+* **4/14/22** 4-6 hours total. Duh. *a* and *b* can *both* change between calls of `fast-expt-iter`. [facepalm]
+
