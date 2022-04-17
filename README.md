@@ -12,9 +12,9 @@ If you are a student viewing this repo at some undetermined future time after wh
 
 If you are a researcher or manager viewing this repo at some undertermined future time after which I have made it public, and I somehow actually did manage to get some of the answers right and you kinda like the code you see and would like me to join your lab/research group/team/whatever, then feel free to contact me through whatever means it is people use to contact each other on GitHub.
 
-# Exercises Worked
+## Exercises Worked
 
-<style>
+<!--style>
   table {
     border-collapse: collapse;
     border-spacing: 0px;
@@ -39,7 +39,7 @@ If you are a researcher or manager viewing this repo at some undertermined futur
   .no-problem {
     background-color: #ccc;
   }
-</style>
+</style-->
 <table>
   <tr>
     <th>1.1</th>
@@ -484,7 +484,7 @@ If you are a researcher or manager viewing this repo at some undertermined futur
     <td id="5_52"class="not-done">52&nbsp;&nbsp;</td>
     <td colspan=14 class="no-problem"></td>
   </tr>
-</table>## Progress/notes/microblog, whatever you want to call it
+</table>## Progress/notes/microblog
 
 * **4/11/22** Can't find my previous solutions to &sect; 1.2, so working through it again for the <code>(inc times-read-&sect;1.2)</code><sup>th</sup> time, and... I forgot how brutal chapter 1 is, teaching freshman computer science using functional programming with junior/senior-level numerical analysis as the motivating examples.
 
@@ -508,3 +508,5 @@ If you are a researcher or manager viewing this repo at some undertermined futur
 * **4/16/22** On to chapter 2! Being completionist is getting in the way of learning efficiently. (Plus I broke the spine of my book, so page 73-74 is coming dangerously close to falling out altogether, so I want to avoid /[re]+/-reading &sect;1.3.) Reread 2.1, maybe revisit a problem or two, then start 2.2. If Chapter 1 is a [frighteningly-advanced] Scheme-based version of [what I know as] [COSC 1436-COSC-1437](https://reportcenter.highered.texas.gov/training-materials/lower-division-academic-course-guide-spring-21/ "The Texas Academic Course Guide Manual (ACGM); other states have similar systems.") &#215; topics from junior/master's-level numerical analysis, and chapter 2 looks to be a Scheme-based version of [COSC-2436](https://reportcenter.highered.texas.gov/training-materials/lower-division-academic-course-guide-spring-21/ "Also the ACGM"), then Chapters 3-5 are really the meat of what I want to get into anyway.
 
   Went ahead and spent all day on a progress table, and maybe 15-20 minutes? (maybe half an hour?) on a quick Python script to merge it in the middle of the readme file. It currently resides in a Jupyter notebook (since that's the easiest way to experiment in Python, even for non-data science tasks), so it needs to move to a Python file, shebang and everything.
+
+  Ugh, that's right, GitHub strips CSS from markdown. At this rate, I'm going to wind up putting everything in a GitHub Pages repo and writing my custom JAMstack blog compiler thing.
