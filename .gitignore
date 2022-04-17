@@ -7,3 +7,6 @@
 make-progress-file.ipynb
 .ipynb_checkpoints
 .ipynb_checkpoints/*
+readme-*.md
+progress.csv
+progress.html
