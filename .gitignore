@@ -4,5 +4,6 @@
 *.bak.*
 *.rkt~
 *-checkpoint.ipynb
+make-progress-file.ipynb
 .ipynb_checkpoints
 .ipynb_checkpoints/*
