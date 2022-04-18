@@ -107,12 +107,12 @@ If you are a researcher or manager viewing this repo at some undertermined futur
     <td id="2_4"class="done">4&nbsp;&#10003;</td>
     <td id="2_5"class="done">5&nbsp;&#10003;</td>
     <td id="2_6"class="done">6&nbsp;&#10003;</td>
-    <td id="2_7"class="not-done">7&nbsp;&nbsp;</td>
-    <td id="2_8"class="not-done">8&nbsp;&nbsp;</td>
-    <td id="2_9"class="not-done">9&nbsp;&nbsp;</td>
-    <td id="2_10"class="not-done">10&nbsp;&nbsp;</td>
+    <td id="2_7"class="done">7&nbsp;&#10003;</td>
+    <td id="2_8"class="done">8&nbsp;&#10003;</td>
+    <td id="2_9"class="done">9&nbsp;&#10003;</td>
+    <td id="2_10"class="done">10&nbsp;&#10003;</td>
     <td id="2_11"class="not-done">11&nbsp;&nbsp;</td>
-    <td id="2_12"class="not-done">12&nbsp;&nbsp;</td>
+    <td id="2_12"class="done">12&nbsp;&#10003;</td>
     <td id="2_13"class="not-done">13&nbsp;&nbsp;</td>
     <td id="2_14"class="not-done">14&nbsp;&nbsp;</td>
     <td id="2_15"class="not-done">15&nbsp;&nbsp;</td>
@@ -484,7 +484,10 @@ If you are a researcher or manager viewing this repo at some undertermined futur
     <td id="5_52"class="not-done">52&nbsp;&nbsp;</td>
     <td colspan=14 class="no-problem"></td>
   </tr>
-</table>## Progress/notes/microblog
+</table>
+
+
+## Progress/notes/microblog
 
 * **4/11/22** Can't find my previous solutions to &sect; 1.2, so working through it again for the <code>(inc times-read-&sect;1.2)</code><sup>th</sup> time, and... I forgot how brutal chapter 1 is, teaching freshman computer science using functional programming with junior/senior-level numerical analysis as the motivating examples.
 
@@ -510,3 +513,7 @@ If you are a researcher or manager viewing this repo at some undertermined futur
   Went ahead and spent all day on a progress table, and maybe 15-20 minutes? (maybe half an hour?) on a quick Python script to merge it in the middle of the readme file. It currently resides in a Jupyter notebook (since that's the easiest way to experiment in Python, even for non-data science tasks), so it needs to move to a Python file, shebang and everything.
 
   Ugh, that's right, GitHub strips CSS from markdown. At this rate, I'm going to wind up putting everything in a GitHub Pages repo and writing my custom JAMstack blog compiler thing.
+
+* **4/17/22** "Happy" Easter.
+
+  I only half-finished exercise 2.3 last year, and I don't feel like spending time on it today. Exercise 2.9 is kind of answered, but I feel like I could do better; 2.9 and 2.11 feel related, so I'll circle back to them later. I kind of want to re-do all of 2.1.4 in an OO language.

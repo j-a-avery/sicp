@@ -1,6 +1,7 @@
 #lang racket
 
 ;;;;; Functions not included in BiwaScheme
+;;;;;;; Apparently I started this in repl.it or something?)
 (define (remainder a b)
   (- a (* b (truncate (/ a b)))))
 
@@ -200,8 +201,28 @@
 (define (cdr2 z)
   (z (lambda (p q) q)))
 
+; ; Just for fun, verify (car2 z) = x
+; (car2 z)
+; => (car (cons x y))
+; => (car λm.(m x y))
+; => (λm.(m x y) λp.λq.p)
+; => (λp.λq.p x y)
+; => (λq.x y)
+; => x
+; 
+; ; Verify (cdr2 z) = y
+; (cdr z)
+; => (cdr (cons x y))
+; => (cdr λm.(m x y))
+; => (λm.(m x y) λp.λq.q)
+; => (λp.λq.q x y)
+; => (λq.q y)
+; => y
+
+
 
 ;; Exercise 2.5
+;;;;;;; (2/17/22) Wow, I actually did this one, huh?
 (define (cons3 a b)
   (* (expt 2 a)
      (expt 3 b)))
@@ -306,4 +327,149 @@
 ;   = λf.λx.(f (f (f (f x)))) = four QED!
 
 
+;;;; 2.1.4
+(define (add-interval x y)
+  (make-interval (+ (lower-bound x) (lower-bound y))
+                 (+ (upper-bound x) (upper-bound y))))
+
+(define (mul-interval x y)
+  (let ((p1 (* (lower-bound x) (lower-bound y)))
+        (p2 (* (lower-bound x) (upper-bound y)))
+        (p3 (* (upper-bound x) (lower-bound y)))
+        (p4 (* (upper-bound x) (upper-bound y))))
+    (make-interval (min p1 p2 p3 p4)
+                   (max p1 p2 p3 p4))))
+
+(define (div1-interval x y)
+  (mul-interval x
+                (make-interval (/ 1.0 (upper-bound y))
+                               (/ 1.0 (lower-bound y)))))
+
+;; Exercise 2.7
+(define (make-interval a b) (cons a b))
+
+(define (lower-bound i) (car i))
+(define (upper-bound i) (cdr i))
+
+;; Exercise 2.8
+(define (sub-interval x y)
+  (make-interval (- (lower-bound x) (lower-bound y))
+                 (- (upper-bound x) (upper-bound y))))
+
+;; Exercise 2.9
+(define (width i)
+  (/ (- (upper-bound i) (lower-bound i)) 2.0))
+
+; ;;;; Show that the width of the sum/difference of two intervals is a function
+; ;;;; of the widths of the intervals being added/subtracted.
+; 
+; (define i (interval li ui))
+; (define j (interval lj uj))
+; 
+; then
+; (width i)
+; => (* 1/2 (- (upper-bound i) (lower-bound i)))
+; => (* 1/2 (- ui li))
+; 
+; and
+; (width j)
+; => (* 1/2 (- (upper-bound j) (lower-bound j)))
+; => (* 1/2 (- uj lj))
+; 
+; The sum i + j is
+; (add-interval i j)
+; => (interval (+ (lower-bound i) (lower-bound j))
+;              (+ (upper-bound i) (upper-bound j)))
+; 
+; and the width of the interval (i + j) is
+; (width (add-interval i j))
+; => (width (interval (+ (lower-bound i) (lower-bound j))
+;                     (+ (upper-bound i) (upper-bound j))))
+; => (width (interval (+ li lj) (+ ui uj)))
+; => (* 1/2 (- (+ ui uj) (+ li lj)))
+; => (* 1/2 (- (+ ui uj) li lj))
+; => (* 1/2 (+ (- ui li) (- uj lj)))
+; => (+ (* 1/2 (- ui li))
+;       (* 1/2 (- uj lj)))
+; => (+ (width i) (width j))
+; 
+; Thus (width (add-interval i j)) is a function of the widths of i and j.
+; 
+; (...in traditional math notation...)
+; 
+; Let i be the interval (li, ui)
+; Let j be the interval (lj, uj)
+; 
+; Then width(i) = (1/2)(ui - li)
+; and  width(j) = (1/2)(uj - lj)
+; and the interval h = i + j = the interval (li + lj, ui + uj)
+; 
+; Then width(h) = (1/2)((ui + uj) - (li + lj))
+; => (1/2)(ui + uj - li - lj)
+; => (1/2)(ui - li + uj - lj)
+; => (1/2)(ui - li) + (1/2)(uj + lj)
+; => width(i) + width(j)
+; Thus, width(h) = width(i + j) = width(i) + width(j),
+; i.e. the width of the sum of two intervals is a function of the widths of the
+; intervals.
+; 
+; 
+; ;;;; Give examples to show that this is not true for multiplication or
+; ;;;; division.
+; 
+
+
+(define i1 (make-interval 1 2))
+(define i2 (make-interval 2 4))
+(define i3 (make-interval 3 6))
+(define i4 (make-interval 2 8))
+(define i5 (make-interval -2 8))
+(define i6 (make-interval -8 -2))
+
+(display "Widths of individual intervals")(newline)
+(width i1)
+(width i2)
+(width i3)
+(width i4)
+(width i5)
+(width i6)
+
+(display "Widths of products of intervals")(newline)
+(list (width i1) (width i2) (width (mul-interval i1 i2)))
+(list (width i2) (width i3) (width (mul-interval i2 i3)))
+(list (width i3) (width i4) (width (mul-interval i3 i4)))
+(list (width i4) (width i5) (width (mul-interval i4 i5)))
+(list (width i4) (width i6) (width (mul-interval i4 i6)))
+
+;; Exercise 2.10
+(define (div-interval x y)
+  (if (and (<= (lower-bound y) 0)
+           (>= (upper-bound y) 0))
+      (error "Dividing by an interval which straddles 0 implicitly divides by 0.")
+      (mul-interval
+       x
+       (make-interval (/ 1.0 (upper-bound y))
+                      (/ 1.0 (lower-bound y))))))
+
+;; Exercise 2.11 - tacet
+
+; definitions from p. 95
+(define (make-center-width c w)
+  (make-interval (- c w) (+ c w)))
+
+(define (center i)
+  (/ (+ (lower-bound i) (upper-bound i)) 2))
+
+;; Exercise 2.12
+(define (make-center-percent center percent-tolerance)
+  (let ((tolerance (* center percent-tolerance)))
+    (make-interval (- center tolerance) (+ center tolerance))))
+
+;; The percent selector could be either i = c +/- p => p = u/c-1 or p = 1-l/c,
+;; where of course u = (upper-bound i), l = (lower-bound i), and c = (center i).
+;; (Yay seventh grade pre-algebra!)
+;; The code for the latter is infinitessimally more readable,
+;; so I'm going with that one.
+(define (percent i)
+  (- 1 (/ (lower-bound i) (center i))))
 
