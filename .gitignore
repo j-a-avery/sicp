@@ -11,3 +11,5 @@ readme-*.md
 progress.csv
 progress.html
 *#*
+docs.sources
+docs.sources/*
