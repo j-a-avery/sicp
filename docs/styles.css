@@ -1,9 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&family=Source+Sans+Pro&display=swap');
+
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+}
 
 table {
   border-collapse: collapse;
   border-spacing: 0px;
-  font-family: 'Xanh Mono', monospace;}
+  font-family: 'Source Code Pro', monospace;
+}
 
 td, th {
   padding: 5px;
@@ -27,4 +32,9 @@ td, th {
 nav li {
   display: inline-block;
   list-style: none;
+  margin-right: 1em;
+}
+
+pre code {
+  font-family: 'Source Code Pro', monospace;
 }
