@@ -1,0 +1,25 @@
+table {
+  border-collapse: collapse;
+  border-spacing: 0px;
+  font-family: monospace;
+}
+
+td, th {
+  padding: 5px;
+  text-align: right;
+  border: 1px solid #ccc;
+}
+
+.done {
+  background-color: #d2f9d2;
+  color: black;
+}
+
+.not-done {
+  color: black;
+}
+
+.no-problem {
+  background-color: #ccc;
+}
+

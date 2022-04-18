@@ -4,7 +4,7 @@ I am (very slowly) working through the classic textbook *Structure and Interpret
 
 This is for my own personal practice and edification.
 
-For notes/thoughts/observations/whining/complaining about my progress through the book, there's also a [Github Pages site](https://j-a-avery.github.io/sicp/) set up.
+For notes/thoughts/observations/whining/complaining about my progress through the book, there's also a [Github Pages site](https://j-a-avery.github.io/sicp/) set up (mostly because, for perfectly understandable reasons, GitHub is a jerk about CSS in README.md files).
 
 More than anything else, this repo exists to help me keep my place and not start over again for the `(inc times-started-SICP)`<sup>th</sup> time. If it didn't have to be public for GitHub Pages to work on a free account, it would be a private repo.
 
