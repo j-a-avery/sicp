@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Xanh+Mono&display=swap');
+
 table {
   border-collapse: collapse;
   border-spacing: 0px;
-  font-family: monospace;
-}
+  font-family: 'Xanh Mono', monospace;}
 
 td, th {
   padding: 5px;
