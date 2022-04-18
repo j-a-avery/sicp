@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="./styles.css">
+  <title>SICP Exercises Worked as of Sunday, April 17, 2022</title>
+</head>
+
+<body>
+  <h1>Notes, Observations, Whining, Etc.</h1>
+  <header>
+  <nav>
+    <ul>
+      <li>
+        <a href="https://github.com/j-a-avery/sicp">Back to Repo</a>
+      </li>
+      <li>
+        <a href="./index.html">Progress Chart</a>
+      </li>
+      <li>
+        <a href="./notes.html">Notes and Observations Miniblog</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/scheme.min.js"></script>
+</header>
+
+  <section id="observations">
+  <article>
+    <h2>4/11/22</h2>
+    <p>Can't find my previous solutions to &sect; 1.2, so working through it again for the <code>(inc times-read-&sect;1.2)</code><sup>th</sup> time, and... I forgot how brutal chapter 1 is, teaching freshman computer science using functional programming with junior/senior-level numerical analysis as the motivating examples.</p>
+  </article>
+
+  <article>
+    <h2>4/12/22</h2>
+    <p>Used data science instead of computer science to answer 1.15, which is almost certainly not the right way to do it. The data in <code>section-1.2-exercise-1.15-data.txt</code> is produced with <pre><code class="hljs language-scheme">(for-each
+  (lambda (d)
+    (print
+      (let ((r (degrees->radians d))
+            (degrees->radians 
+            (lambda (d) (* d (/ pi 180)))))
+        (list d r (sine r) (sin r) count-ps)))
+    (newline))
+  (range 0 1800))
+    </code></pre></p>
+  </article>
+
+  <article>
+    <h2>4/13/22</h2>
+    <p>Oh, so now we're teaching loop invariants to freshmen as an offhand remark during an exercise?</p>
+    <p>They say COVID is a vascular disease that affects everything, including the brain. I had COVID three months ago tomorrow. I remember 1.16-1.18 being easy. I've spent two hours on 1.16 and I can't %$@#ing get it.</p>
+  </article>
+
+  <article>
+    <h2>4/14/22</h2>
+    <p>4-6 hours total. Duh. \(a\) and \(b\) can <em>both</em> be updated betwen calls to <code>fast-expt-iter</code>. [facepalm]</p>
+  </article>
+
+  <article>
+    <h2>4/16/22</h2>
+    <p>On to chapter 2! Being completionist is getting in the way of learning efficiently. (Plus I broke the spine of my book, so page 73-74 is coming dangerously close to falling out altogether, so I want to avoid <code>/[re]+/</code>-reading &sect;1.3.) Reread 2.1, maybe revisit a problem or two, then start 2.2. If Chapter 1 is a [frighteningly-advanced] Scheme-based version of [what I know as] <a href="https://reportcenter.highered.texas.gov/training-materials/lower-division-academic-course-guide-spring-21/" title="The Texas Academic Course Guide Manual (ACGM); other states have similar systems.">COSC 1436-COSC 1437</a> &#215; topics from junior/master's-level numerical analysis, and chapter 2 looks to be a Scheme-based version of <span title="Also in the ACGM">COSC-2436</span>, then chapters 3-5 are really the meat of what I want to get into anyway.</p>
+    <p>Went ahead and spent all day on a progress table, and maybe 15-20 minutes(? probably about half an hour) on a quick Python script to merge it in the middle of the readme file. It currently resides in a Jupyter notebook (since that's the easiest way to experiment in Python, even for non-data science tasks), so it needs to move to a Python file, shebang and everything.</p>
+    <h3>Later&hellip;</h3>
+    Ugh, that's right, GitHub strips CSS from markdown. At this rate, I'm going to wind up putting everything in a GitHub Pages repo and writing my own custom JAMstack blog compiler thing.
+  </article>
+
+  <article>
+    <h2>4/17/22</h2>
+    <p>"Happy" Easter.</p>
+    <p>I only half-finished exercise 2.3 last year, and I don't feel like spending time on it today. Exercise 2.9 is kind of answered, but I feel like I could do better; 2.9 and 2.11 feel related, so I'll circle back to them later. I kind of want to re-do all of &sect;2.1.4 in an object-oriented language. (Blasphemy!) I need to be working more of the proof problems, since the(/a new) goal is PhD prep. Today is a holiday; that'll be my excuse for not doing them.</p>
+  </article>
+</section>
+</body>
+</html>
+

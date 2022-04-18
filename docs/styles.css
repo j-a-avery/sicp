@@ -24,3 +24,7 @@ td, th {
   background-color: #ccc;
 }
 
+nav li {
+  display: inline-block;
+  list-style: none;
+}
