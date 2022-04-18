@@ -1,5 +1,7 @@
 # Solutions to Structure and Interpretation of Computer Programs
 
+For notes/thoughts/observations/whining/complaining about my progress through the book, there's also a (Github Pages site)[https://j-a-avery.github.io/sicp/] set up.
+
 I am (very slowly) working through the classic textbook *Structure and Interpretation of Computer Programs*.
 
 This is for my own personal practice and edification.
