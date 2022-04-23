@@ -118,6 +118,7 @@
         ((= kinds-of-coins 4) 25)
         ((= kinds-of-coins 5) 50)))
 ;;;;;;; Me being a smartass... the next paragraph *kind of* talks about this.
+;;;;;;; Also, see Exercise 2.19.
 
 
 ;; Exercise 1.11

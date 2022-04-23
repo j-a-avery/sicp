@@ -35,6 +35,6 @@ nav li {
   margin-right: 1em;
 }
 
-pre code {
+code, pre code {
   font-family: 'Source Code Pro', monospace;
 }
