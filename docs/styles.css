@@ -36,7 +36,7 @@ nav li {
   margin-right: 1em;
 }
 
-code, pre code {
+code {
   font-family: 'Source Code Pro', monospace;
   background-color: lightgray;
   border-radius: 5px;
@@ -46,10 +46,23 @@ code, pre code {
   padding-bottom: 1px;
 }
 
+code.blockcode { 
+  display: block;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 600;
+  background-color: #333;
+  padding: 1em;
+  border-radius: 10px;
+  max-width: 80eem;
+  background-color: #333;
+  color: yellowgreen;
+}
+
 body {
   width: 80%;
   min-width: 300px;
   margin: auto;
+  margin-bottom: 1in;
 }
 
 header {

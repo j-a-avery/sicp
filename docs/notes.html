@@ -26,8 +26,8 @@
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/scheme.min.js"></script>
+  <!--script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/languages/scheme.min.js"></script-->
 </header>
 
   <section id="observations">
@@ -78,7 +78,7 @@
 
   <article>
     <h2>4/12/22</h2>
-    <p>Used data science instead of computer science to answer 1.15, which is almost certainly not the right way to do it. The data in <code>section-1.2-exercise-1.15-data.txt</code> is produced with <pre><code class="hljs language-scheme">(for-each
+    <p>Used data science instead of computer science to answer 1.15, which is almost certainly not the right way to do it. The data in <code>section-1.2-exercise-1.15-data.txt</code> is produced with <pre><code class="blockcode">(for-each
   (lambda (d)
     (print
       (let ((r (degrees->radians d))
@@ -87,7 +87,7 @@
         (list d r (sine r) (sin r) count-ps)))
     (newline))
   (range 0 1800))
-    </code></pre></p>
+</code></pre></p>
   </article>
 
   <article>
