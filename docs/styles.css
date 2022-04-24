@@ -44,3 +44,19 @@ code, pre code {
   padding-top: 1px;
   padding-bottom: 1px;
 }
+
+body {
+  width: 80%;
+  min-width: 300px;
+  margin: auto;
+}
+
+header {
+  width: 80%;
+  min-width: 300px;
+  margin: auto;
+}
+
+h1 {
+  text-align: center;
+}

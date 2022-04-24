@@ -32,8 +32,48 @@
 
   <section id="observations">
   <article>
-    <h2>4/11/22</h2>
-    <p>Can't find my previous solutions to &sect;1.2, so working through it again for the <code>(inc times-read-&sect;1.2)</code><sup>th</sup> time, and... I forgot how brutal chapter 1 is, teaching freshman computer science using functional programming with junior/senior-level numerical analysis as the motivating examples.</p>
+    <h2>4/23/22</h2>
+    <p>Woohoo! Map!</p>
+    <p>Almost finished &sect;2.2.2. Exercise 2.32 looks interesting, but it will have to wait for another day.</p>
+    <p>Since I'm still doing the miniblog the old-fashioned way (manual updates to an HTML page) for now, went ahead and put the &OpenCurlyDoubleQuote;posts&CloseCurlyDoubleQuote; in reverse chronological order, while there are still few enough of them that it's not terribly difficult. The pages aren't <em>completely</em> manual. I have a Python script that generates the progress chart based on a CSV, and creates both that page and this one using the same template (which is why the nav is the same on both pages.) If I improve it to the point that it's not such an ugly quick-and-dirty hack, I'll add it to the repo (or a separate one). Or, I'm also on the lookout for some (<em><strong>very</strong></em> simple JAMstack-type blog post compiler thing.) For now, manual HTML and <code>$ python3 create-docs.py</code> are fine.</p>
+  </article>
+
+  <article>
+    <h2>4/22/23 (barely)</h2>
+    <p>Stupid me forgot the other day that it's totally possible to <code>$ racket &lang;program&rang; > &lang;datafile&rang;.txt</code>. (Or maybe I was just using Windows that day. (But&hellip; WSL exists, so that's not an excuse.)) That was a lot easier than copying and pasting.</p>
+    <p>Using Awk would have made it even easier. <code>racket &lang;program&rang; | awk '{ print $2, $1, $8 }' > &lang;datafile&rang;.txt</code>, but I knew exactly no Awk four hours ago, and that program was literally just a bathroom thought based on skimming a tutorial, that just happened to work on the second try (after I added curly braces).</p>
+  </article>
+
+  <article>
+    <h2>4/21/22</h2>
+    <p>Job search stuff, other projects, general laziness, too much <i>No Man's Sky</i>&hellip; Yesterday I read the first two chapters of Hankin's <i>Introduction to Lambda Calculi for Computer Scientists</i> instead of SICP. Sometime around the 2020-2021 Holiday season I read Michaelson's <i>Functional Programming through Lambda Calculus</i>, and am very glad to have that background not only while reading SICP, but very much while reading what I will now refer to as &lambda;C/CS.</p>
+    <p>Unrelated: I've found two really good lists of HTML escape characters: <a href="https://mateam.net/html-escape-characters/">one from a digital marketing agency</a> (blah!), and <a href="https://www.htmlhelp.com/reference/html40/entities/symbols.html">one that's potentially really outdated</a> but still useful/helpful nonetheless.</p>
+    <p>Reading 2.2. I remember being confused by <code>car</code> and <code>cdr</code> the very first time I started this book, in 2017. I must have breezed through chapter 1 and ignored the exercises that time, because there's no way I would have gotten that far that fast, otherwise. Maybe I should learn from my younger self and not try to do everything. At any rate, I am very glad to be finished with numerical analysis and have moved on to sophomore data structures. Lists are so much more fun than numbers.</p>
+  </article>
+
+  <article>
+    <h2>4/17/22</h2>
+    <p>"Happy" Easter.</p>
+    <p>I only half-finished exercise 2.3 last year, and I don't feel like spending time on it today. Exercise 2.9 is kind of answered, but I feel like I could do better; 2.9 and 2.11 feel related, so I'll circle back to them later. I kind of want to re-do all of &sect;2.1.4 in an object-oriented language. (Blasphemy!) I need to be working more of the proof problems, since the(/a new) goal is PhD prep. Today is a holiday; that'll be my excuse for not doing them.</p>
+  </article>
+
+  <article>
+    <h2>4/16/22</h2>
+    <p>On to chapter 2! Being completionist is getting in the way of learning efficiently. (Plus I broke the spine of my book, so page 73-74 is coming dangerously close to falling out altogether, so I want to avoid <code>/[re]+/</code>-reading &sect;1.3.) Reread 2.1, maybe revisit a problem or two, then start 2.2. If Chapter 1 is a [frighteningly-advanced] Scheme-based version of [what I know as] <a href="https://reportcenter.highered.texas.gov/training-materials/lower-division-academic-course-guide-spring-21/" title="The Texas Academic Course Guide Manual (ACGM); other states have similar systems.">COSC 1436-COSC 1437</a> &times; topics from junior/master's-level numerical analysis, and chapter 2 looks to be a Scheme-based version of <span title="Also in the ACGM">COSC-2436</span>, then chapters 3-5 are really the meat of what I want to get into anyway.</p>
+    <p>Went ahead and spent all day on a progress table, and maybe 15-20 minutes(? probably about half an hour) on a quick Python script to merge it in the middle of the readme file. It currently resides in a Jupyter notebook (since that's the easiest way to experiment in Python, even for non-data science tasks), so it needs to move to a Python file, shebang and everything.</p>
+    <h3>Later&hellip;</h3>
+    Ugh, that's right, GitHub strips CSS from markdown. At this rate, I'm going to wind up putting everything in a GitHub Pages repo and writing my own custom JAMstack blog compiler thing.
+  </article>
+
+  <article>
+    <h2>4/14/22</h2>
+    <p>4-6 hours total. Duh. \(a\) and \(b\) can <em>both</em> be updated betwen calls to <code>fast-expt-iter</code>. [facepalm]</p>
+  </article>
+
+  <article>
+    <h2>4/13/22</h2>
+    <p>Oh, so now we're teaching loop invariants to freshmen as an offhand remark during an exercise?</p>
+    <p>They say COVID is a vascular disease that affects everything, including the brain. I had COVID three months ago tomorrow. I remember 1.16-1.18 being easy. I've spent two hours on 1.16 and I can't %$@#ing get it.</p>
   </article>
 
   <article>
@@ -51,47 +91,8 @@
   </article>
 
   <article>
-    <h2>4/13/22</h2>
-    <p>Oh, so now we're teaching loop invariants to freshmen as an offhand remark during an exercise?</p>
-    <p>They say COVID is a vascular disease that affects everything, including the brain. I had COVID three months ago tomorrow. I remember 1.16-1.18 being easy. I've spent two hours on 1.16 and I can't %$@#ing get it.</p>
-  </article>
-
-  <article>
-    <h2>4/14/22</h2>
-    <p>4-6 hours total. Duh. \(a\) and \(b\) can <em>both</em> be updated betwen calls to <code>fast-expt-iter</code>. [facepalm]</p>
-  </article>
-
-  <article>
-    <h2>4/16/22</h2>
-    <p>On to chapter 2! Being completionist is getting in the way of learning efficiently. (Plus I broke the spine of my book, so page 73-74 is coming dangerously close to falling out altogether, so I want to avoid <code>/[re]+/</code>-reading &sect;1.3.) Reread 2.1, maybe revisit a problem or two, then start 2.2. If Chapter 1 is a [frighteningly-advanced] Scheme-based version of [what I know as] <a href="https://reportcenter.highered.texas.gov/training-materials/lower-division-academic-course-guide-spring-21/" title="The Texas Academic Course Guide Manual (ACGM); other states have similar systems.">COSC 1436-COSC 1437</a> &times; topics from junior/master's-level numerical analysis, and chapter 2 looks to be a Scheme-based version of <span title="Also in the ACGM">COSC-2436</span>, then chapters 3-5 are really the meat of what I want to get into anyway.</p>
-    <p>Went ahead and spent all day on a progress table, and maybe 15-20 minutes(? probably about half an hour) on a quick Python script to merge it in the middle of the readme file. It currently resides in a Jupyter notebook (since that's the easiest way to experiment in Python, even for non-data science tasks), so it needs to move to a Python file, shebang and everything.</p>
-    <h3>Later&hellip;</h3>
-    Ugh, that's right, GitHub strips CSS from markdown. At this rate, I'm going to wind up putting everything in a GitHub Pages repo and writing my own custom JAMstack blog compiler thing.
-  </article>
-
-  <article>
-    <h2>4/17/22</h2>
-    <p>"Happy" Easter.</p>
-    <p>I only half-finished exercise 2.3 last year, and I don't feel like spending time on it today. Exercise 2.9 is kind of answered, but I feel like I could do better; 2.9 and 2.11 feel related, so I'll circle back to them later. I kind of want to re-do all of &sect;2.1.4 in an object-oriented language. (Blasphemy!) I need to be working more of the proof problems, since the(/a new) goal is PhD prep. Today is a holiday; that'll be my excuse for not doing them.</p>
-  </article>
-
-  <article>
-    <h2>4/21/22</h2>
-    <p>Job search stuff, other projects, general laziness, too much <i>No Man's Sky</i>&hellip; Yesterday I read the first two chapters of Hankin's <i>Introduction to Lambda Calculi for Computer Scientists</i> instead of SICP. Sometime around the 2020-2021 Holiday season I read Michaelson's <i>Functional Programming through Lambda Calculus</i>, and am very glad to have that background not only while reading SICP, but very much while reading what I will now refer to as &lambda;C/CS.</p>
-    <p>Unrelated: I've found two really good lists of HTML escape characters: <a href="https://mateam.net/html-escape-characters/">one from a digital marketing agency</a> (blah!), and <a href="https://www.htmlhelp.com/reference/html40/entities/symbols.html">one that's potentially really outdated</a> but still useful/helpful nonetheless.</p>
-    <p>Reading 2.2. I remember being confused by <code>car</code> and <code>cdr</code> the very first time I started this book, in 2017. I must have breezed through chapter 1 and ignored the exercises that time, because there's no way I would have gotten that far that fast, otherwise. Maybe I should learn from my younger self and not try to do everything. At any rate, I am very glad to be finished with numerical analysis and have moved on to sophomore data structures. Lists are so much more fun than numbers.</p>
-  </article>
-
-  <article>
-    <h2>4/22/23 (barely)</h2>
-    <p>Stupid me forgot the other day that it's totally possible to <code>$ racket &lang;program&rang; > &lang;datafile&rang;.txt</code>. (Or maybe I was just using Windows that day. (But&hellip; WSL exists, so that's not an excuse.)) That was a lot easier than copying and pasting.</p>
-    <p>Using Awk would have made it even easier. <code>racket &lang;program&rang; | awk '{ print $2, $1, $8 }' > &lang;datafile&rang;.txt</code>, but I knew exactly no Awk four hours ago, and that program was literally just a bathroom thought based on skimming a tutorial, that just happened to work on the second try (after I added curly braces).</p>
-  </article>
-
-  <article>
-    <h2>4/23/22</h2>
-    <p>Woohoo! Map!</p>
-    <p>Almost finished &sect;2.2.2. Exercise 2.32 looks interesting, but it will have to wait for another day.</p>
+    <h2>4/11/22</h2>
+    <p>Can't find my previous solutions to &sect;1.2, so working through it again for the <code>(inc times-read-&sect;1.2)</code><sup>th</sup> time, and... I forgot how brutal chapter 1 is, teaching freshman computer science using functional programming with junior/senior-level numerical analysis as the motivating examples.</p>
   </article>
 </section>
 </body>
