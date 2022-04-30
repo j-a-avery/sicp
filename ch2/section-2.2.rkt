@@ -185,3 +185,143 @@
                (tree-map function (cdr tree))))))
 
 (define (square-tree3 tree) (tree-map square tree))
+
+;; Exercise 2.32
+
+(define (subsets s)
+  (if (null? s)
+      (list nil)
+      (let ((rest (subsets (cdr s))))
+        (append rest
+                (map
+                 (lambda (ss)
+                   (append (list (car s)) ss))
+                 rest)))))
+
+(subsets '(1 2 3))
+
+;;;; This works because for every element in the set (including the null set),
+;;;; it adds both the subsets that do not contain the element, and the subsets
+;;;; that do contain it.
+;;;;;;; That is a horrible explanation, but I'm sleepy.
+
+;;;; Section 2.2.3
+
+(define (accumulate op initial sequence)
+  (if (null? sequence)
+      initial
+      (op (car sequence)
+          (accumulate op initial (cdr sequence)))))
+
+;; Exercise 2.33
+(define (map* p sequence)
+  (accumulate (lambda (x y) (cons (p x) y)) nil sequence))
+
+(equal? (map square (range 5))
+        (map* square (range 5)))
+
+(define (append* seq1 seq2)
+  (accumulate cons seq2 seq1))
+
+(equal? (append (range 5) (range 6 11))
+        (append* (range 5) (range 6 11)))
+
+(define (length* sequence)
+  (accumulate
+   (lambda (item count) (+ count 1))
+   0
+   sequence))
+
+(= (length (range 1000))
+   (length* (range 1000)))
+
+
+;; Exercise 2.34
+(define (horner-eval x coefficients)
+  (accumulate (lambda (this-coeff higher-terms)
+                (+ (* x higher-terms) this-coeff))
+              0
+              coefficients))
+
+
+;; Exercise 2.38
+(define fold-right accumulate)
+
+(define (fold-left op initial sequence)
+  (define (iter result rest)
+    (if (null? rest)
+        result
+        (iter (op result (car rest))
+              (cdr rest))))
+  (iter initial sequence))
+
+; (fold-right / 1 (list 1 2 3))
+; => (/ 1 (fold-right / 1 '(2 3)))
+; => (/ 1 (/ 2 (fold-right / 1 '(3))))
+; => (/ 1 (/ 2 (/ 3 (fold-right / 1 nil))))
+; => (/ 1 (/ 2 (/ 3 1)))
+; => (/ 1 (/ 2 3))
+; => (/ 1 2/3)
+; => 3/2
+; 
+; (fold-left / 1 (list 1 2 3))
+; => (iter 1 (list 1 2 3))
+; => (iter (/ 1 1) (list 2 3))
+; => (iter (/ 1 2) (list 3))
+; => (iter (/ 1/2 3) nil)
+; => 1/6
+; 
+; (fold-right list nil (list 1 2 3))
+; => (list 1 (fold-right list nil (list 2 3)))
+; => (list 1 (list 2 (fold-right list nil (list 3))))
+; => (list 1 (list 2 (list 3 (fold-right list nil nil))))
+; => (list 1 (list 2 (list 3 nil)))
+; => '(1 (2 (3 '())))
+; 
+; (fold-left list nil (list 1 2 3))
+; => (iter nil (list 1 2 3))
+; => (iter (list nil 1) (list 2 3))
+; => (iter (list (list nil 1) 2) (list 3))
+; => (iter (list (list (list nil 1) 2) 3) nil)
+; => (list (list (list nil 1) 2) 3)
+; => '(((() 1) 2) 3)
+
+
+;;;; Fold-left and fold-right will be guaranteed to produce the same values for
+;;;; any sequence iff op is associative.
+
+;; Nested Mappings
+(define (enumerate-interval a b)
+  (range a (+ b 1)))
+
+(define (divides? a b)
+  (= (remainder b a) 0))
+
+(define (find-divisor n test-divisor)
+  (cond ((> (square test-divisor) n) n)
+        ((divides? test-divisor n) test-divisor)
+        (else (find-divisor n (+ test-divisor 1)))))
+
+(define (smallest-divisor n)
+  (find-divisor n 2))
+
+(define (prime? n)
+  (= n (smallest-divisor n)))
+
+(define (flatmap proc seq)
+  (accumulate append nil (map proc seq)))
+
+(define (prime-sum? pair)
+  (prime? (+ (car pair) (cadr pair))))
+
+(define (make-pair-sum pair)
+  (list (car pair) (cadr pair) (+ (car pair) (cadr pair))))
+
+(define (prime-sum-pairs n)
+  (map make-pair-sum
+       (filter prime-sum?
+               (flatmap
+                (lambda (i)
+                  (map (lambda (j) (list i j))
+                       (enumerate-interval 1 (- i 1))))
+                (enumerate-interval 1 n)))))
