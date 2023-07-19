@@ -1,6 +1,6 @@
 # Solutions to Structure and Interpretation of Computer Programs
 
-I am (very slowly) working through the classic textbook *Structure and Interpretation of Computer Programs*.
+I am (**VERY** slowly) working through the classic textbook *Structure and Interpretation of Computer Programs*.
 
 This is for my own personal practice and edification.
 
